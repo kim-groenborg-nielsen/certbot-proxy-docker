@@ -1,0 +1,5 @@
+/etc
+/data/nginx/default.conf
+/data/certbot/conf
+.idea
+.vscode
