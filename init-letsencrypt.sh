@@ -39,6 +39,10 @@ docker compose run --rm --entrypoint "\
     -subj '/CN=localhost'" certbot
 echo
 
+if [[ " $@ " =~ " --od " ]]; then
+  # Exit if option --od (only dummy) is set
+  exit 0
+fi
 
 echo "### Starting nginx ..."
 docker compose up --force-recreate -d nginx
